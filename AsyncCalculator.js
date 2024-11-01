@@ -12,12 +12,12 @@ const oblicz = (pierwszaLiczba, drugaLiczba, operation, callback) => {
 
     const wynik = operation === 'dodawanie' ? pierwszaLiczba + drugaLiczba : pierwszaLiczba * drugaLiczba;
     callback(wynik);
-    
+
   }, 1000);
 };
 
 const main = async () => {
-  const question = (q) => new Promise(resolve => rl.question(q, resolve));
+  const question = (prompt) => new Promise(resolve => rl.question(prompt, resolve));
 
   const pierwszaLiczba = parseFloat(await question('Podaj pierwszą liczbę: '));
   const drugaLiczba = parseFloat(await question('Podaj drugą liczbę: '));
